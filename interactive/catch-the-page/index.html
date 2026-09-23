@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+  Catch the Page: a free 404 page template
+  From 100 Free 404 Pages by MM Rahman Bappi, MIT license
+  https://mmrahmanbappi.github.io/100-free-404-pages/
+
+  How to use: replace the brand name, links and colors, then set this file
+  as your site's 404 page. The guide explains how for every kind of host:
+  https://mmrahmanbappi.github.io/100-free-404-pages/guide/
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Quickstep</title>
+<meta name="description" content="Sorry, the page you are looking for does not exist or has moved.">
+<!-- A 404 page should not appear in search results, so keep noindex. -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%234f46e5'/><text x='32' y='42' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='white'>404</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{display:grid;place-items:center;background:#f1f5ff;color:#1e1b4b;font-family:"Nunito",system-ui,sans-serif;text-align:center;padding:2rem;overflow:hidden}
+h1{font-size:clamp(2rem,6vw,3rem);margin:0 0 .6rem}p{color:#4c4a7a;margin:0 0 1rem}
+#run{position:fixed;left:50%;top:65%;transform:translate(-50%,-50%);background:#4f46e5;color:#fff;border:0;padding:.9rem 1.4rem;border-radius:12px;font:inherit;font-weight:800;cursor:pointer;transition:left .2s,top .2s}
+.home{color:#4f46e5;font-weight:700}#score{font-weight:800;color:#4f46e5}
+</style>
+</head>
+<body>
+<main><h1>404: the page is running away</h1><p>Try to catch it. Missed it <span id="score">0</span> times so far.</p><p><a class="home" href="/">Or just go to the home page</a></p></main>
+<button id="run" type="button">Catch me</button>
+<script>
+const b=document.getElementById('run'),s=document.getElementById('score');let n=0;
+function jump(){n++;s.textContent=n;b.style.left=(10+Math.random()*80)+'%';b.style.top=(20+Math.random()*70)+'%';if(n>=8){b.textContent='Fine, you win';b.onclick=()=>location.href='/'}}
+b.addEventListener('pointerenter',()=>{if(n<8)jump()});
+b.addEventListener('click',()=>{if(n<8)jump()});
+</script>
+</body>
+</html>

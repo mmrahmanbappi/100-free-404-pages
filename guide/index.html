@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Set Up a Custom 404 Page on Any Website</title>
+<meta name="description" content="Step by step: add a custom 404 error page on Apache, Nginx, WordPress, cPanel, Netlify, Vercel, Cloudflare Pages and GitHub Pages, and keep your SEO safe.">
+<link rel="canonical" href="https://mmrahmanbappi.github.io/100-free-404-pages/guide/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="MM Rahman Bappi">
+<meta name="theme-color" content="#d6284b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="100 Free 404 Pages">
+<meta property="og:title" content="How to Set Up a Custom 404 Page on Any Website">
+<meta property="og:description" content="Step by step: add a custom 404 error page on Apache, Nginx, WordPress, cPanel, Netlify, Vercel, Cloudflare Pages and GitHub Pages, and keep your SEO safe.">
+<meta property="og:url" content="https://mmrahmanbappi.github.io/100-free-404-pages/guide/">
+<meta property="og:image" content="https://mmrahmanbappi.github.io/100-free-404-pages/_site/og-guide.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Set Up a Custom 404 Page on Any Website">
+<meta name="twitter:description" content="Step by step: add a custom 404 error page on Apache, Nginx, WordPress, cPanel, Netlify, Vercel, Cloudflare Pages and GitHub Pages, and keep your SEO safe.">
+<meta name="twitter:image" content="https://mmrahmanbappi.github.io/100-free-404-pages/_site/og-guide.jpg">
+<link rel="icon" href="https://mmrahmanbappi.github.io/100-free-404-pages/_site/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://mmrahmanbappi.github.io/100-free-404-pages/_site/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://mmrahmanbappi.github.io/100-free-404-pages/#website",
+   "url": "https://mmrahmanbappi.github.io/100-free-404-pages/",
+   "name": "100 Free 404 Pages",
+   "description": "Free 404 error page templates in HTML and CSS.",
+   "inLanguage": "en",
+   "publisher": {
+    "@id": "https://mmrahmanbappi.github.io/100-free-404-pages/#author"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://mmrahmanbappi.github.io/100-free-404-pages/#author",
+   "name": "MM Rahman Bappi",
+   "url": "https://mmseo.app/",
+   "sameAs": [
+    "https://github.com/mmrahmanbappi"
+   ]
+  },
+  {
+   "@type": "TechArticle",
+   "@id": "https://mmrahmanbappi.github.io/100-free-404-pages/guide/#article",
+   "headline": "How to set up a custom 404 page on any website",
+   "description": "Step by step: add a custom 404 error page on Apache, Nginx, WordPress, cPanel, Netlify, Vercel, Cloudflare Pages and GitHub Pages, and keep your SEO safe.",
+   "url": "https://mmrahmanbappi.github.io/100-free-404-pages/guide/",
+   "mainEntityOfPage": "https://mmrahmanbappi.github.io/100-free-404-pages/guide/",
+   "image": "https://mmrahmanbappi.github.io/100-free-404-pages/_site/og-guide.jpg",
+   "author": {
+    "@id": "https://mmrahmanbappi.github.io/100-free-404-pages/#author"
+   },
+   "publisher": {
+    "@id": "https://mmrahmanbappi.github.io/100-free-404-pages/#author"
+   },
+   "datePublished": "2026-09-23",
+   "dateModified": "2026-09-23",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://mmrahmanbappi.github.io/100-free-404-pages/#website"
+   },
+   "proficiencyLevel": "Beginner"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "404 page templates",
+     "item": "https://mmrahmanbappi.github.io/100-free-404-pages/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "How to set up a 404 page",
+     "item": "https://mmrahmanbappi.github.io/100-free-404-pages/guide/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Should I redirect all missing pages to my home page?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Redirecting every broken link to the home page confuses visitors and Google treats it as a soft 404. Show a real 404 page with the 404 status code, and only redirect pages that really moved to a new address."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I check that my 404 page sends the right status code?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Open a missing address on your site, then open your browser's developer tools, go to the Network tab and reload. The first request should show the status 404. You can also run curl -I with the address in a terminal."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where do I find broken links on my site?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Google Search Console lists pages that return 404 in the Pages report. Fix links that point to them, or add a 301 redirect when a page moved."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap"><a class="brand" href="https://mmrahmanbappi.github.io/100-free-404-pages/">100 Free <b>404</b> Pages</a>
+<nav aria-label="Main"><a href="https://mmrahmanbappi.github.io/100-free-404-pages/#templates">Templates</a><a href="https://mmrahmanbappi.github.io/100-free-404-pages/guide/">How to set up</a><a href="https://mmrahmanbappi.github.io/100-free-404-pages/#faq">FAQ</a><a href="https://github.com/mmrahmanbappi/100-free-404-pages">GitHub</a></nav></div></header>
+<main id="main">
+<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="https://mmrahmanbappi.github.io/100-free-404-pages/">404 page templates</a> / <span aria-current="page">Setup guide</span></nav></div>
+<article class="wrap narrow guide">
+<h1>How to set up a custom 404 page</h1>
+<p class="lead">You picked a template. Now your server needs to show it whenever someone opens a page that does not exist. Find your host below and follow the steps. Each one takes a few minutes.</p>
+<p>First, download a template and save it as <code>404.html</code>. Change the brand name and links, and upload it to the main folder of your website.</p>
+
+<h2>Apache and most shared hosting</h2>
+<p>If your host uses Apache or LiteSpeed (most shared hosting plans do), add this line to the <code>.htaccess</code> file in your main folder, usually <code>public_html</code>. Create the file if it does not exist.</p>
+<pre><code>ErrorDocument 404 /404.html</code></pre>
+<p>Use a path that starts with a slash, not a full address with https. A full address makes Apache send a redirect instead of the 404 status.</p>
+
+<h2>cPanel</h2>
+<p>In cPanel, open <b>Error Pages</b> in the Advanced section, choose your domain, click <b>404 (Not Found)</b>, paste the template code and save. cPanel writes the <code>.htaccess</code> line for you.</p>
+
+<h2>Nginx</h2>
+<p>Add this inside the <code>server</code> block of your site configuration, then reload Nginx with <code>sudo nginx -s reload</code>.</p>
+<pre><code>error_page 404 /404.html;
+location = /404.html {
+    internal;
+}</code></pre>
+
+<h2>WordPress</h2>
+<p>WordPress uses the <code>404.php</code> file in your theme. The safest way is a child theme: create <code>404.php</code> in the child theme folder and paste the template's HTML into it. If you want your normal header and footer, put <code>&lt;?php get_header(); ?&gt;</code> at the top and <code>&lt;?php get_footer(); ?&gt;</code> at the bottom, and keep only the main content from the template. Many themes and page builders also have a 404 page setting.</p>
+
+<h2>Netlify, Cloudflare Pages and Vercel</h2>
+<p>Put <code>404.html</code> in the folder you deploy, next to <code>index.html</code>. Netlify and Cloudflare Pages use it automatically. Vercel does the same for static sites. For Next.js, create <code>app/not-found.js</code> (or <code>pages/404.js</code>) and move the template's HTML into it.</p>
+
+<h2>GitHub Pages</h2>
+<p>Add <code>404.html</code> to the root of the branch or folder you publish. GitHub Pages shows it for every missing page and sends the correct 404 status.</p>
+
+<h2>Keep your SEO safe</h2>
+<ul class="ticks">
+<li><b>Send the 404 status code.</b> The page should look friendly, but the server must still say 404. If it says 200, Google may report a soft 404.</li>
+<li><b>Do not redirect everything to the home page.</b> Only redirect pages that really moved, with a 301 redirect to the new address.</li>
+<li><b>Keep the noindex tag.</b> Every template includes it, so the error page itself never shows up in search results.</li>
+<li><b>Use links that start with a slash</b>, like <code>/</code> and <code>/contact</code>, so they work from any address.</li>
+<li><b>Check for broken links</b> in Google Search Console, in the Pages report, and fix the most visited ones first.</li>
+</ul>
+<p class="note">Tip: open a made-up address on your site, such as <code>/test-404</code>, to see your new page in action.</p>
+
+<h2>Questions</h2>
+<details><summary>Should I redirect all missing pages to my home page?</summary><p>No. Redirecting every broken link to the home page confuses visitors and Google treats it as a soft 404. Show a real 404 page with the 404 status code, and only redirect pages that really moved to a new address.</p></details><details><summary>How do I check that my 404 page sends the right status code?</summary><p>Open a missing address on your site, then open your browser&#x27;s developer tools, go to the Network tab and reload. The first request should show the status 404. You can also run curl -I with the address in a terminal.</p></details><details><summary>Where do I find broken links on my site?</summary><p>Google Search Console lists pages that return 404 in the Pages report. Fix links that point to them, or add a 301 redirect when a page moved.</p></details>
+<p style="margin-top:2rem"><a class="btn main" href="https://mmrahmanbappi.github.io/100-free-404-pages/#templates">Choose a template</a></p>
+</article>
+</main>
+<footer><div class="wrap"><p>Made by <a href="https://mmseo.app/">MM Rahman Bappi</a>. Free under the MIT license.</p><p><a href="https://github.com/mmrahmanbappi/100-free-404-pages">Source on GitHub</a></p></div></footer>
+
+</body>
+</html>

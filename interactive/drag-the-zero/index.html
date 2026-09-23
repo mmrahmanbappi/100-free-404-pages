@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+  Fix the Number: a free 404 page template
+  From 100 Free 404 Pages by MM Rahman Bappi, MIT license
+  https://mmrahmanbappi.github.io/100-free-404-pages/
+
+  How to use: replace the brand name, links and colors, then set this file
+  as your site's 404 page. The guide explains how for every kind of host:
+  https://mmrahmanbappi.github.io/100-free-404-pages/guide/
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Puzzlebox</title>
+<meta name="description" content="Sorry, the page you are looking for does not exist or has moved.">
+<!-- A 404 page should not appear in search results, so keep noindex. -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#db2777">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23db2777'/><text x='32' y='42' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='white'>404</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{display:grid;place-items:center;background:#fdf2f8;color:#500724;font-family:"Rubik",system-ui,sans-serif;text-align:center;padding:2rem}
+.n{display:flex;gap:.1em;justify-content:center;align-items:center;font-size:clamp(5rem,18vw,9rem);font-weight:800;color:#be185d}
+.slot{width:.62em;height:.9em;border:4px dashed #f9a8d4;border-radius:.15em}
+#z{position:relative;font-size:clamp(5rem,18vw,9rem);font-weight:800;color:#db2777;cursor:grab;touch-action:none;background:none;border:0;padding:0;font-family:inherit;margin-top:.5rem}
+p{margin:1rem 0 1.5rem}a{color:#be185d;font-weight:700}
+</style>
+</head>
+<body>
+<main><h1 class="sr">Page not found</h1><div class="n" id="n" aria-hidden="true"><span>4</span><span class="slot" id="slot"></span><span>4</span></div><button id="z" type="button" aria-label="Put the zero back">0</button><p id="m">The zero fell out. Drag it back up, or tap it.</p><a href="/">Go to the home page</a></main>
+<script>
+const z=document.getElementById('z'),slot=document.getElementById('slot'),m=document.getElementById('m');let sx,sy,drag=false;
+function fix(){slot.replaceWith(Object.assign(document.createElement('span'),{textContent:'0'}));z.remove();m.textContent='Fixed! The number is whole again. The page is still missing, though.'}
+z.addEventListener('pointerdown',e=>{drag=true;sx=e.clientX;sy=e.clientY;z.setPointerCapture(e.pointerId)});
+z.addEventListener('pointermove',e=>{if(drag)z.style.transform=`translate(${e.clientX-sx}px,${e.clientY-sy}px)`});
+z.addEventListener('pointerup',e=>{drag=false;const a=slot.getBoundingClientRect(),b=z.getBoundingClientRect();if(Math.abs(a.x-b.x)<80&&Math.abs(a.y-b.y)<100||Math.hypot(e.clientX-sx,e.clientY-sy)<5)fix();else z.style.transform=''});
+</script>
+</body>
+</html>

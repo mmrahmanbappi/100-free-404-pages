@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+  Memory Cards: a free 404 page template
+  From 100 Free 404 Pages by MM Rahman Bappi, MIT license
+  https://mmrahmanbappi.github.io/100-free-404-pages/
+
+  How to use: replace the brand name, links and colors, then set this file
+  as your site's 404 page. The guide explains how for every kind of host:
+  https://mmrahmanbappi.github.io/100-free-404-pages/guide/
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Mindful Play</title>
+<meta name="description" content="Sorry, the page you are looking for does not exist or has moved.">
+<!-- A 404 page should not appear in search results, so keep noindex. -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#f28482">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23f28482'/><text x='32' y='42' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='white'>404</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{display:grid;place-items:center;background:#fff8f0;color:#3a2e39;font-family:"Quicksand",system-ui,sans-serif;text-align:center;padding:2rem}
+h1{font-size:2rem;margin:0}p{color:#6d5c6c}
+.grid{display:grid;grid-template-columns:repeat(3,72px);gap:10px;justify-content:center;margin:1.5rem 0}
+.grid button{height:72px;border:0;border-radius:12px;background:#f28482;color:transparent;font-size:2rem;cursor:pointer;font-weight:700}
+.grid button.up,.grid button.ok{background:#fff;color:#3a2e39;box-shadow:inset 0 0 0 2px #f28482}
+a{color:#e5383b;font-weight:700}
+</style>
+</head>
+<body>
+<main><h1>404, page not found</h1><p>While you are here, can you match the pairs?</p><div class="grid" id="g"></div><p id="msg">Find all three pairs.</p><a href="/">Back to the home page</a></main>
+<script>
+const v=['4','0','?','4','0','?'].sort(()=>Math.random()-.5),g=document.getElementById('g'),msg=document.getElementById('msg');let open=[],done=0;
+v.forEach((c,i)=>{const b=document.createElement('button');b.type='button';b.textContent=c;b.setAttribute('aria-label','Card '+(i+1));b.onclick=()=>{if(b.classList.contains('up')||b.classList.contains('ok')||open.length==2)return;b.classList.add('up');open.push(b);if(open.length==2){setTimeout(()=>{if(open[0].textContent==open[1].textContent){open.forEach(x=>{x.classList.remove('up');x.classList.add('ok')});done++;if(done==3)msg.textContent='Nice memory. Now, let us find you a real page.'}else open.forEach(x=>x.classList.remove('up'));open=[]},600)}};g.appendChild(b)});
+</script>
+</body>
+</html>

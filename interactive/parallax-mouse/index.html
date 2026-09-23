@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+  Parallax: a free 404 page template
+  From 100 Free 404 Pages by MM Rahman Bappi, MIT license
+  https://mmrahmanbappi.github.io/100-free-404-pages/
+
+  How to use: replace the brand name, links and colors, then set this file
+  as your site's 404 page. The guide explains how for every kind of host:
+  https://mmrahmanbappi.github.io/100-free-404-pages/guide/
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Layerly</title>
+<meta name="description" content="Sorry, the page you are looking for does not exist or has moved.">
+<!-- A 404 page should not appear in search results, so keep noindex. -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#38bdf8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2338bdf8'/><text x='32' y='42' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='white'>404</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{display:grid;place-items:center;background:#0f172a;color:#e2e8f0;font-family:"Sora",system-ui,sans-serif;text-align:center;overflow:hidden;padding:2rem}
+.l{position:fixed;inset:0;pointer-events:none}
+.l span{position:absolute;border-radius:50%;opacity:.8}
+main{position:relative}
+b{font-size:clamp(6rem,20vw,11rem);font-weight:800;background:linear-gradient(90deg,#38bdf8,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+p{color:#94a3b8;margin:.5rem 0 1.8rem}a{color:#38bdf8;font-weight:700}
+</style>
+</head>
+<body>
+<div class="l" data-d="20" aria-hidden="true"><span style="width:120px;height:120px;left:10%;top:15%;background:#1e3a8a"></span><span style="width:60px;height:60px;right:15%;top:25%;background:#4c1d95"></span></div>
+<div class="l" data-d="50" aria-hidden="true"><span style="width:40px;height:40px;left:20%;bottom:20%;background:#0ea5e9"></span><span style="width:90px;height:90px;right:10%;bottom:15%;background:#7c3aed"></span></div>
+<main><b aria-hidden="true">404</b><h1>This page is out of reach</h1><p>Move your mouse and look around. It is not here.</p><a href="/">Go to the home page</a></main>
+<script>
+const L=[...document.querySelectorAll('.l')];addEventListener('pointermove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;L.forEach(l=>{const d=+l.dataset.d;l.style.transform=`translate(${-x*d}px,${-y*d}px)`})});
+</script>
+</body>
+</html>

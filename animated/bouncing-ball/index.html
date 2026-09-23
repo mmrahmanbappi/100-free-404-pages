@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+  Bouncing Ball: a free 404 page template
+  From 100 Free 404 Pages by MM Rahman Bappi, MIT license
+  https://mmrahmanbappi.github.io/100-free-404-pages/
+
+  How to use: replace the brand name, links and colors, then set this file
+  as your site's 404 page. The guide explains how for every kind of host:
+  https://mmrahmanbappi.github.io/100-free-404-pages/guide/
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Hopscotch</title>
+<meta name="description" content="Sorry, the page you are looking for does not exist or has moved.">
+<!-- A 404 page should not appear in search results, so keep noindex. -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#ff6b35">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23ff6b35'/><text x='32' y='42' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='white'>404</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{display:grid;place-items:center;background:#fff4e6;color:#3d2c1e;font-family:"Baloo 2",system-ui,sans-serif;text-align:center;padding:2rem}
+.n{display:flex;align-items:flex-end;justify-content:center;gap:1rem;font-size:clamp(6rem,20vw,11rem);font-weight:800;color:#ff6b35;height:1.2em}
+.ball{width:.7em;height:.7em;border-radius:50%;background:#ffb627;animation:bounce 1s cubic-bezier(.3,0,.6,1) infinite alternate;margin-bottom:.12em}
+@keyframes bounce{from{transform:translateY(-.6em)}to{transform:translateY(0) scaleY(.88)}}
+h1{font-size:1.8rem;margin:1.2rem 0 .5rem}p{margin:0 0 1.8rem;opacity:.8}
+a{background:#ff6b35;color:#fff;padding:.8rem 1.5rem;border-radius:14px;text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+<main><div class="n" aria-hidden="true"><span>4</span><span class="ball"></span><span>4</span></div><h1>This page bounced</h1><p>It jumped off the site and did not come back.</p><a href="/">Go to the home page</a></main>
+
+</body>
+</html>

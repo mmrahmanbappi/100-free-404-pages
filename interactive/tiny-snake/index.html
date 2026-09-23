@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+  Snake: a free 404 page template
+  From 100 Free 404 Pages by MM Rahman Bappi, MIT license
+  https://mmrahmanbappi.github.io/100-free-404-pages/
+
+  How to use: replace the brand name, links and colors, then set this file
+  as your site's 404 page. The guide explains how for every kind of host:
+  https://mmrahmanbappi.github.io/100-free-404-pages/guide/
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Pixel Garden</title>
+<meta name="description" content="Sorry, the page you are looking for does not exist or has moved.">
+<!-- A 404 page should not appear in search results, so keep noindex. -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#95d5b2">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2395d5b2'/><text x='32' y='42' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='white'>404</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{display:grid;place-items:center;background:#1b2d1f;color:#d8f3dc;font-family:"Press Start 2P",monospace;text-align:center;padding:1.5rem}
+h1{font-size:clamp(.9rem,3vw,1.3rem);line-height:1.6;margin:0 0 1rem}
+canvas{background:#2d4a31;border:4px solid #95d5b2;image-rendering:pixelated;width:min(80vw,320px);height:auto;touch-action:none}
+p{font-size:.6rem;line-height:1.8;margin:1rem 0}a{color:#95d5b2}
+</style>
+</head>
+<body>
+<main><h1>404 page not found</h1><canvas id="c" width="160" height="160" aria-label="Snake game"></canvas><p>Arrow keys or swipe to play. Score: <span id="s">0</span></p><a href="/">Exit to home page</a></main>
+<script>
+const c=document.getElementById('c'),x=c.getContext('2d'),S=document.getElementById('s'),N=16,G=10;let sn=[[8,8]],d=[1,0],f=[3,3],sc=0;
+function place(){f=[Math.floor(Math.random()*N),Math.floor(Math.random()*N)]}
+function step(){const h=[(sn[0][0]+d[0]+N)%N,(sn[0][1]+d[1]+N)%N];if(sn.some(p=>p[0]==h[0]&&p[1]==h[1])){sn=[[8,8]];d=[1,0];sc=0}sn.unshift(h);if(h[0]==f[0]&&h[1]==f[1]){sc++;place()}else sn.pop();S.textContent=sc;
+x.fillStyle='#2d4a31';x.fillRect(0,0,160,160);x.fillStyle='#ffd166';x.fillRect(f[0]*G,f[1]*G,G,G);x.fillStyle='#95d5b2';sn.forEach(p=>x.fillRect(p[0]*G,p[1]*G,G-1,G-1))}
+const K={ArrowUp:[0,-1],ArrowDown:[0,1],ArrowLeft:[-1,0],ArrowRight:[1,0]};addEventListener('keydown',e=>{const k=K[e.key];if(k&&!(k[0]==-d[0]&&k[1]==-d[1])){d=k;e.preventDefault()}});
+let t0;c.addEventListener('pointerdown',e=>t0=[e.clientX,e.clientY]);c.addEventListener('pointerup',e=>{if(!t0)return;const dx=e.clientX-t0[0],dy=e.clientY-t0[1];const k=Math.abs(dx)>Math.abs(dy)?[Math.sign(dx),0]:[0,Math.sign(dy)];if(!(k[0]==-d[0]&&k[1]==-d[1]))d=k});
+setInterval(step,140);
+</script>
+</body>
+</html>

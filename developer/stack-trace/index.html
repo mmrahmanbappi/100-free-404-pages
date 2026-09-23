@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+  Stack Trace: a free 404 page template
+  From 100 Free 404 Pages by MM Rahman Bappi, MIT license
+  https://mmrahmanbappi.github.io/100-free-404-pages/
+
+  How to use: replace the brand name, links and colors, then set this file
+  as your site's 404 page. The guide explains how for every kind of host:
+  https://mmrahmanbappi.github.io/100-free-404-pages/guide/
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Tracewell</title>
+<meta name="description" content="Sorry, the page you are looking for does not exist or has moved.">
+<!-- A 404 page should not appear in search results, so keep noindex. -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#c53030">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23c53030'/><text x='32' y='42' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='white'>404</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{background:#fff5f5;color:#3f1d1d;font-family:"Roboto Mono",monospace;padding:clamp(1.5rem,5vw,4rem)}
+main{max-width:52rem;margin:0 auto}
+h1{font-family:"Roboto",system-ui,sans-serif;color:#c53030;font-size:clamp(1.8rem,5vw,2.6rem);margin:0 0 .4rem}
+.sub{font-family:"Roboto",system-ui,sans-serif;color:#7b3a3a;margin:0 0 1.5rem}
+pre{background:#fff;border-left:4px solid #c53030;padding:1.2rem 1.4rem;font:inherit;font-size:.9rem;line-height:1.8;overflow-x:auto}
+.at{color:#9b4d4d}.hi{background:#fed7d7}
+a{font-family:"Roboto",system-ui,sans-serif;display:inline-block;margin-top:1.4rem;background:#c53030;color:#fff;padding:.7rem 1.2rem;border-radius:6px;text-decoration:none}
+</style>
+</head>
+<body>
+<main><h1>PageNotFoundError: 404</h1><p class="sub">Unhandled exception while looking for this page.</p><pre>Traceback (most recent call last):
+  <span class="at">at</span> visitor.clickLink(old-bookmark)
+  <span class="at">at</span> browser.follow(url)
+  <span class="at">at</span> server.lookup(path)
+<span class="hi">  <span class="at">at</span> server.lookup: page does not exist</span>
+PageNotFoundError: the page was moved or deleted</pre><a href="/">Recover: go to home</a></main>
+
+</body>
+</html>

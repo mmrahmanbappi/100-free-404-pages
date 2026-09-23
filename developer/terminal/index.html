@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+  Terminal: a free 404 page template
+  From 100 Free 404 Pages by MM Rahman Bappi, MIT license
+  https://mmrahmanbappi.github.io/100-free-404-pages/
+
+  How to use: replace the brand name, links and colors, then set this file
+  as your site's 404 page. The guide explains how for every kind of host:
+  https://mmrahmanbappi.github.io/100-free-404-pages/guide/
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Shellbox</title>
+<meta name="description" content="Sorry, the page you are looking for does not exist or has moved.">
+<!-- A 404 page should not appear in search results, so keep noindex. -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#89b4fa">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2389b4fa'/><text x='32' y='42' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='white'>404</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{display:grid;place-items:center;background:#1e1e2e;font-family:"JetBrains Mono",monospace;color:#cdd6f4;padding:1.5rem}
+.w{width:min(96vw,680px);background:#11111b;border-radius:12px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.bar{background:#313244;padding:.7rem 1rem;display:flex;gap:.5rem}.bar i{width:12px;height:12px;border-radius:50%}
+.c{padding:1.5rem;font-size:.95rem;line-height:1.8}.g{color:#a6e3a1}.r{color:#f38ba8}.y{color:#f9e2af}.m{color:#6c7086}
+.cur{display:inline-block;width:9px;height:1.1em;background:#cdd6f4;vertical-align:text-bottom;animation:b 1s steps(1) infinite}@keyframes b{50%{opacity:0}}
+a{color:#89b4fa}h1{font-size:inherit;margin:0;font-weight:400;display:inline}
+</style>
+</head>
+<body>
+<main class="w"><div class="bar" aria-hidden="true"><i style="background:#f38ba8"></i><i style="background:#f9e2af"></i><i style="background:#a6e3a1"></i></div><div class="c">
+<div><span class="g">visitor@site</span>:<span class="y">~</span>$ cd /this-page</div>
+<div><span class="r">bash: cd: /this-page: <h1>404 page not found</h1></span></div>
+<div><span class="g">visitor@site</span>:<span class="y">~</span>$ ls</div>
+<div><a href="/">home/</a>&nbsp;&nbsp;<a href="/blog">blog/</a>&nbsp;&nbsp;<a href="/docs">docs/</a>&nbsp;&nbsp;<a href="/contact">contact/</a></div>
+<div class="m"># tip: click a folder to go there</div>
+<div><span class="g">visitor@site</span>:<span class="y">~</span>$ <span class="cur"></span></div></div></main>
+
+</body>
+</html>

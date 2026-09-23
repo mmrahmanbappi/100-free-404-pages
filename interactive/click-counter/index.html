@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+  Button Masher: a free 404 page template
+  From 100 Free 404 Pages by MM Rahman Bappi, MIT license
+  https://mmrahmanbappi.github.io/100-free-404-pages/
+
+  How to use: replace the brand name, links and colors, then set this file
+  as your site's 404 page. The guide explains how for every kind of host:
+  https://mmrahmanbappi.github.io/100-free-404-pages/guide/
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Tapster</title>
+<meta name="description" content="Sorry, the page you are looking for does not exist or has moved.">
+<!-- A 404 page should not appear in search results, so keep noindex. -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#ef4444">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23ef4444'/><text x='32' y='42' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='white'>404</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{display:grid;place-items:center;background:#111827;color:#f9fafb;font-family:"Bungee",system-ui,sans-serif;text-align:center;padding:2rem}
+h1{font-size:clamp(1.6rem,5vw,2.4rem);margin:0 0 1rem;font-weight:400}
+#b{width:180px;height:180px;border-radius:50%;border:0;background:#ef4444;color:#fff;font:inherit;font-size:2.4rem;box-shadow:0 12px 0 #991b1b;cursor:pointer;transition:transform .05s,box-shadow .05s}
+#b:active{transform:translateY(10px);box-shadow:0 2px 0 #991b1b}
+p{font-family:system-ui,sans-serif;color:#d1d5db;min-height:3em;margin:1.8rem 0 1rem}a{font-family:system-ui,sans-serif;color:#fca5a5;font-weight:700}
+</style>
+</head>
+<body>
+<main><h1>Page 404 is not here</h1><button id="b" type="button">404</button><p id="m" aria-live="polite">Pressing the button will not bring the page back. But go on.</p><a href="/">Take me to the home page</a></main>
+<script>
+const b=document.getElementById('b'),m=document.getElementById('m');let n=0;const say={5:'Still missing.',15:'You are very determined.',30:'The page appreciates your effort.',50:'Fifty clicks. That is dedication.',100:'One hundred! You win nothing, but you win.'};
+b.onclick=()=>{n++;b.textContent=n;if(say[n])m.textContent=say[n]};
+</script>
+</body>
+</html>

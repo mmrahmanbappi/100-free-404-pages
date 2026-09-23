@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+  Search Helper: a free 404 page template
+  From 100 Free 404 Pages by MM Rahman Bappi, MIT license
+  https://mmrahmanbappi.github.io/100-free-404-pages/
+
+  How to use: replace the brand name, links and colors, then set this file
+  as your site's 404 page. The guide explains how for every kind of host:
+  https://mmrahmanbappi.github.io/100-free-404-pages/guide/
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Helpwise</title>
+<meta name="description" content="Sorry, the page you are looking for does not exist or has moved.">
+<!-- A 404 page should not appear in search results, so keep noindex. -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0ea5e9">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230ea5e9'/><text x='32' y='42' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='white'>404</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{display:grid;place-items:center;background:#f8fafc;color:#0f172a;font-family:"Inter",system-ui,sans-serif;padding:2rem}
+main{width:min(92vw,520px)}
+h1{font-size:2rem;margin:0 0 .4rem}p{color:#64748b;margin:0 0 1.5rem}
+input{width:100%;padding:1rem 1.1rem;border:2px solid #cbd5e1;border-radius:12px;font:inherit;font-size:1.05rem}
+input:focus{border-color:#0ea5e9;outline:none}
+ul{list-style:none;padding:0;margin:.8rem 0 0}li a{display:block;padding:.8rem 1rem;border-radius:10px;text-decoration:none}li a:hover,li a:focus{background:#e0f2fe}
+li small{color:#64748b;margin-left:.5rem}
+</style>
+</head>
+<body>
+<main><h1>We could not find that page</h1><p>Type what you were looking for and we will suggest a page.</p><label class="sr" for="q">What were you looking for?</label><input id="q" type="search" placeholder="For example: pricing, contact, blog" autocomplete="off"><ul id="r"></ul></main>
+<script>
+// Edit this list to match the pages on your site.
+const PAGES=[['Home','/'],['Pricing','/pricing'],['Contact us','/contact'],['Blog','/blog'],['About us','/about'],['Help center','/help'],['Careers','/careers'],['Log in','/login']];
+const q=document.getElementById('q'),r=document.getElementById('r');
+function show(){const t=q.value.toLowerCase().trim();const list=(t?PAGES.filter(p=>p[0].toLowerCase().includes(t)||p[1].includes(t)):PAGES.slice(0,4));r.innerHTML='';list.forEach(p=>{const li=document.createElement('li'),a=document.createElement('a');a.href=p[1];a.textContent=p[0];const s=document.createElement('small');s.textContent=p[1];a.appendChild(s);li.appendChild(a);r.appendChild(li)});if(!list.length){r.innerHTML='<li>No match. Try the <a href="/">home page</a>.</li>'}}
+q.addEventListener('input',show);show();
+</script>
+</body>
+</html>

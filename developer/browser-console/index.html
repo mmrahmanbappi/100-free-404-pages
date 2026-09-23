@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+  Console: a free 404 page template
+  From 100 Free 404 Pages by MM Rahman Bappi, MIT license
+  https://mmrahmanbappi.github.io/100-free-404-pages/
+
+  How to use: replace the brand name, links and colors, then set this file
+  as your site's 404 page. The guide explains how for every kind of host:
+  https://mmrahmanbappi.github.io/100-free-404-pages/guide/
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Devtools Diner</title>
+<meta name="description" content="Sorry, the page you are looking for does not exist or has moved.">
+<!-- A 404 page should not appear in search results, so keep noindex. -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#1a73e8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231a73e8'/><text x='32' y='42' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='white'>404</text></svg>">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{display:grid;place-items:center;background:#e8eaed;font-family:system-ui,sans-serif;padding:1.5rem}
+.p{width:min(96vw,720px);background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.12);font-family:Menlo,Consolas,monospace;font-size:.85rem}
+.tb{display:flex;gap:1.2rem;padding:.55rem 1rem;border-bottom:1px solid #dadce0;color:#5f6368;font-family:system-ui,sans-serif}.tb .on{color:#1a73e8;border-bottom:2px solid #1a73e8}
+.row{padding:.55rem 1rem;border-bottom:1px solid #f1f3f4;display:flex;gap:.6rem}
+.e{background:#fce8e6;color:#c5221f}.w{background:#fef7e0;color:#7a5b00}.i{color:#202124}
+.i::before{content:">";color:#1a73e8}
+a{color:#1a73e8}
+</style>
+</head>
+<body>
+<main class="p"><div class="tb"><span>Elements</span><span class="on">Console</span><span>Network</span></div>
+<div class="row e">GET /this-page 404 (Not Found)</div>
+<div class="row w">Warning: the link you followed may be old or mistyped.</div>
+<div class="row i">&nbsp;<h1 style="font:inherit;margin:0">console.log("Page not found. Try the home page.")</h1></div>
+<div class="row i">&nbsp;location.href = "<a href="/">/</a>"</div></main>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+  Radar: a free 404 page template
+  From 100 Free 404 Pages by MM Rahman Bappi, MIT license
+  https://mmrahmanbappi.github.io/100-free-404-pages/
+
+  How to use: replace the brand name, links and colors, then set this file
+  as your site's 404 page. The guide explains how for every kind of host:
+  https://mmrahmanbappi.github.io/100-free-404-pages/guide/
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Scout</title>
+<meta name="description" content="Sorry, the page you are looking for does not exist or has moved.">
+<!-- A 404 page should not appear in search results, so keep noindex. -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#34d399">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2334d399'/><text x='32' y='42' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='white'>404</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{display:grid;place-items:center;background:#06140f;color:#b7f7d2;font-family:"Chakra Petch",system-ui,sans-serif;text-align:center;padding:2rem}
+.r{position:relative;width:min(70vw,280px);aspect-ratio:1;border-radius:50%;border:2px solid #1f6b4a;margin:0 auto 2rem;background:radial-gradient(circle,transparent 30%,rgba(31,107,74,.25) 31%,transparent 32%,transparent 60%,rgba(31,107,74,.25) 61%,transparent 62%)}
+.r::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(52,211,153,.55),transparent 25%);animation:spin 3s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.r::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;border-radius:50%;background:#34d399}
+h1{font-size:2rem;margin:0 0 .6rem}p{opacity:.75;margin:0 0 1.6rem}a{color:#34d399;font-weight:600}
+</style>
+</head>
+<body>
+<main><div class="r" aria-hidden="true"></div><h1>404: no signal found</h1><p>We scanned the whole area. This page is not in range.</p><a href="/">Return to home base</a></main>
+
+</body>
+</html>
