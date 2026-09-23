@@ -32,7 +32,7 @@ a{display:inline-block;background:#ca8a04;color:#fff;padding:.9rem 1.5rem;border
 """<main><svg viewBox="0 0 200 160" aria-hidden="true"><path d="M10 20 h30 l20 90 h100 l20 -70 h-130" fill="none" stroke="#422006" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="75" cy="135" r="12" fill="#422006"/><circle cx="145" cy="135" r="12" fill="#422006"/><text x="115" y="85" font-family="Arial" font-weight="800" font-size="30" text-anchor="middle" fill="#ca8a04">404</text></svg><h1>Nothing to see in this aisle</h1><p>The page you wanted is not in our store. Your cart is safe, though.</p><a href="/shop">Keep shopping</a></main>""",
 fonts=["Rubik:wght@400;700"], theme="#ca8a04")
 
-add(C, "fashion", "Fashion Store", "Maison Vale", "An elegant fashion store page with a large serif headline and new arrivals.",
+add(C, "fashion", "Fashion Store", "Maison Vale", "A fashion store page with a large serif headline and four new arrivals.",
 GRID + """body{background:#f7f3ee;color:#1a1a1a;font-family:"Jost",system-ui,sans-serif}
 main{max-width:64rem;margin:0 auto;padding:clamp(2rem,6vw,4rem) 1.5rem}
 .brand{font-family:"Cormorant Garamond",serif;font-size:1.6rem;text-align:center;margin-bottom:2.5rem}

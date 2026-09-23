@@ -9,7 +9,7 @@ HD = """.hd{display:flex;justify-content:space-between;align-items:center;paddin
 .logo{display:flex;align-items:center;gap:.5rem;font-weight:800;text-decoration:none;font-size:1.15rem}.dot{width:14px;height:14px;border-radius:4px}
 .hd nav{display:flex;gap:1.3rem;flex-wrap:wrap}.hd nav a{text-decoration:none;opacity:.8}"""
 
-add(C, "corporate", "Corporate", "Meridian Group", "A calm corporate page with the site header, a clear message and four useful links.",
+add(C, "corporate", "Corporate", "Meridian Group", "A calm page for a company. It keeps your menu and shows four useful links.",
 HD + """body{background:#fff;color:#14213d;font-family:"Inter",system-ui,sans-serif}
 main{max-width:64rem;margin:0 auto;padding:clamp(2rem,8vw,6rem) clamp(1.2rem,5vw,4rem)}
 small{color:#1d4ed8;font-weight:700}h1{font-size:clamp(2.2rem,5vw,3.4rem);margin:.5rem 0 1rem;letter-spacing:-.02em}
@@ -21,7 +21,7 @@ site_header("Meridian Group", "#1d4ed8") + """<main><small>Error 404</small><h1>
 <div class="links"><a href="/services"><b>Our services</b><span>What we do for clients</span></a><a href="/about"><b>About us</b><span>Our history and team</span></a><a href="/news"><b>News</b><span>Latest announcements</span></a><a href="/contact"><b>Contact</b><span>Talk to a real person</span></a></div></main>""",
 fonts=["Inter:wght@400;700;800"], theme="#1d4ed8")
 
-add(C, "saas", "SaaS", "Relay", "A product page style with a gradient badge, a button to the dashboard and help links.",
+add(C, "saas", "SaaS", "Relay", "A page for a software product. It has a button to the dashboard and help links.",
 HD + """body{background:linear-gradient(180deg,#f5f3ff,#fff 60%);color:#1e1b4b;font-family:"Plus Jakarta Sans",system-ui,sans-serif}
 main{text-align:center;padding:clamp(3rem,10vw,7rem) 1.5rem;max-width:40rem;margin:0 auto}
 .badge{display:inline-block;padding:.35rem .9rem;border-radius:999px;background:linear-gradient(90deg,#8b5cf6,#ec4899);color:#fff;font-weight:700;font-size:.9rem}
@@ -32,7 +32,7 @@ h1{font-size:clamp(2.2rem,6vw,3.4rem);margin:1rem 0;letter-spacing:-.02em}p{colo
 site_header("Relay", "#8b5cf6") + """<main><span class="badge">404</span><h1>This page is not available</h1><p>The link may be old, or the feature may have moved to a new place in the app.</p><div class="row"><a class="p" href="/app">Open your dashboard</a><a class="s" href="/">Go to the homepage</a></div><p class="help">Need help? Visit the <a href="/docs">docs</a> or <a href="/contact">contact support</a>.</p></main>""",
 fonts=["Plus Jakarta Sans:wght@400;700;800"], theme="#8b5cf6")
 
-add(C, "law-firm", "Law Firm", "Hartley & Webb", "A formal, trustworthy page for a law or accounting firm, with a phone number.",
+add(C, "law-firm", "Law Firm", "Hartley & Webb", "A formal page for a law or accounting firm, with a big phone button.",
 HD + """body{background:#faf8f4;color:#1f2a37;font-family:"Libre Baskerville",Georgia,serif}
 .hd{border-bottom:1px solid #e3ddd0;font-family:system-ui,sans-serif}
 main{max-width:46rem;margin:0 auto;padding:clamp(3rem,10vw,6rem) 1.5rem;text-align:center}
@@ -42,7 +42,7 @@ h1{font-size:clamp(2rem,5vw,2.8rem);font-weight:400;margin:0 0 1rem}p{font-size:
 site_header("Hartley &amp; Webb", "#7c5c2b") + """<main><div class="seal" aria-hidden="true">404</div><h1>This page could not be found</h1><p>We may have moved or retired the page you are looking for. If you need advice today, our team is available by phone during office hours, or you can return to our <a href="/">home page</a>.</p><a class="tel" href="tel:+15550100">Call +1 555 0100</a></main>""",
 fonts=["Libre Baskerville"], theme="#7c5c2b")
 
-add(C, "clinic", "Clinic", "Greenfield Clinic", "A clear, reassuring page for a clinic or health service, with booking and urgent care notes.",
+add(C, "clinic", "Clinic", "Greenfield Clinic", "A calm page for a clinic, with a booking button and a note for emergencies.",
 HD + """body{background:#f0faf7;color:#123b33;font-family:"Nunito Sans",system-ui,sans-serif}
 main{max-width:56rem;margin:0 auto;padding:clamp(2rem,8vw,5rem) 1.5rem;display:grid;grid-template-columns:1.3fr 1fr;gap:2rem;align-items:start}
 h1{font-size:clamp(2rem,5vw,3rem);margin:0 0 1rem}p{font-size:1.1rem;line-height:1.7;color:#3d6158}
@@ -54,7 +54,7 @@ site_header("Greenfield Clinic", "#0f766e") + """<main><div><h1>Sorry, we cannot
 <aside><h2>Quick links</h2><p><a href="/">Home</a><br><a href="/services">Our services</a><br><a href="/hours">Opening hours</a></p><p class="urgent"><b>In an emergency</b>, call your local emergency number straight away.</p></aside></main>""",
 fonts=["Nunito Sans:wght@400;700;800"], theme="#0f766e")
 
-add(C, "school", "School", "Brookfield School", "A bright page for a school or college with links for parents, students and staff.",
+add(C, "school", "School", "Brookfield School", "A bright page for a school, with links for parents, students and new families.",
 HD + """body{background:#fffdf5;color:#1c2c4c;font-family:"Lexend",system-ui,sans-serif}
 main{max-width:60rem;margin:0 auto;padding:clamp(2rem,8vw,5rem) 1.5rem;text-align:center}
 .n{font-size:clamp(4rem,14vw,7rem);font-weight:800;color:#f59e0b;margin:0;line-height:1}
@@ -66,7 +66,7 @@ site_header("Brookfield School", "#f59e0b") + """<main><div class="n" aria-hidde
 <div class="g"><a href="/parents" style="--c:#f59e0b"><b>Parents</b><span>Term dates, letters and payments</span></a><a href="/students" style="--c:#3b82f6"><b>Students</b><span>Timetables and homework</span></a><a href="/admissions" style="--c:#10b981"><b>Admissions</b><span>How to apply</span></a></div></main>""",
 fonts=["Lexend:wght@400;800"], theme="#f59e0b")
 
-add(C, "restaurant", "Restaurant", "Olive & Ember", "A warm restaurant page: the dish is off the menu, with links to the menu and bookings.",
+add(C, "restaurant", "Restaurant", "Olive & Ember", "A warm page for a restaurant. The dish is off the menu, but the table is not.",
 HD + """body{background:#1f1a17;color:#f5ece1;font-family:"Cormorant",Georgia,serif}
 .hd a{color:#f5ece1}
 main{max-width:44rem;margin:0 auto;padding:clamp(3rem,10vw,6rem) 1.5rem;text-align:center}
@@ -78,7 +78,7 @@ p{font-size:1.3rem;color:#cbbfb1;line-height:1.6;font-style:italic}
 site_header("Olive &amp; Ember", "#d4a373") + """<main><div class="k">Error 404</div><h1>This dish is off the menu</h1><p>The page you ordered is not available tonight. Our chefs recommend the full menu instead.</p><div class="row"><a class="p" href="/menu">See the menu</a><a href="/book">Book a table</a></div></main>""",
 fonts=["Cormorant:ital,wght@0,600;1,500"], theme="#d4a373")
 
-add(C, "hotel", "Hotel", "Harbor House Hotel", "A hotel page with a check-in style card and links to rooms and bookings.",
+add(C, "hotel", "Hotel", "Harbor House Hotel", "A hotel page shaped like a room key card, with links to rooms and bookings.",
 HD + """body{background:#eef3f7;color:#0f2537;font-family:"Mulish",system-ui,sans-serif}
 main{display:grid;place-items:center;padding:clamp(2rem,8vw,5rem) 1.5rem}
 .card{background:#fff;border-radius:20px;overflow:hidden;width:min(94vw,520px);box-shadow:0 30px 60px -35px rgba(15,37,55,.5)}
@@ -89,7 +89,7 @@ main{display:grid;place-items:center;padding:clamp(2rem,8vw,5rem) 1.5rem}
 site_header("Harbor House", "#c29b57") + """<main><div class="card"><div class="top"><div><span>Room</span><br><b>404</b></div><span>Not available</span></div><div class="body"><h1>This room does not exist</h1><p>The page you tried to open is not part of our hotel. You can still see our rooms, or book your stay directly.</p><div class="row"><a class="p" href="/book">Check availability</a><a class="s" href="/rooms">View rooms</a></div></div></div></main>""",
 fonts=["Mulish:wght@400;700;800"], theme="#c29b57")
 
-add(C, "real-estate", "Real Estate", "Keystone Homes", "A property listing card showing the page as 'sold', with a link to current listings.",
+add(C, "real-estate", "Real Estate", "Keystone Homes", "A house listing marked sold, with a link to homes that are still for sale.",
 HD + """body{background:#f7f7f7;color:#1f2937;font-family:"Outfit",system-ui,sans-serif}
 main{max-width:58rem;margin:0 auto;padding:clamp(2rem,8vw,5rem) 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
 .l{position:relative;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 20px 40px -25px rgba(0,0,0,.3)}
@@ -104,7 +104,7 @@ site_header("Keystone Homes", "#166534") + """<main><div class="l" aria-hidden="
 <div><h1>This listing is gone</h1><p>The property may have sold, or the page moved. There are plenty of homes still available.</p><a class="b" href="/listings">See current listings</a></div></main>""",
 fonts=["Outfit:wght@400;700;800"], theme="#166534")
 
-add(C, "nonprofit", "Nonprofit", "Open Hands", "A friendly nonprofit page with a donate button and ways to get involved.",
+add(C, "nonprofit", "Nonprofit", "Open Hands", "A friendly page for a charity, with a donate button and a volunteer link.",
 HD + """body{background:#fff7f2;color:#3d1f12;font-family:"Karla",system-ui,sans-serif}
 main{max-width:46rem;margin:0 auto;padding:clamp(3rem,10vw,6rem) 1.5rem;text-align:center}
 .heart{width:70px;margin:0 auto 1.2rem}
@@ -113,7 +113,7 @@ h1{font-size:clamp(2rem,5vw,3rem);margin:0 0 1rem}p{font-size:1.15rem;color:#6d4
 site_header("Open Hands", "#e85d04") + """<main><svg class="heart" viewBox="0 0 64 58" aria-hidden="true"><path d="M32 56 C 10 40, 0 28, 0 16 A 16 16 0 0 1 32 10 A 16 16 0 0 1 64 16 C 64 28, 54 40, 32 56Z" fill="#e85d04"/></svg><h1>We could not find this page</h1><p>But you can still make a difference today. Every gift helps families in our community.</p><div class="row"><a class="p" href="/donate">Donate now</a><a class="s" href="/volunteer">Volunteer with us</a></div></main>""",
 fonts=["Karla:wght@400;800"], theme="#e85d04")
 
-add(C, "agency", "Creative Agency", "Studio Kiln", "A bold agency page with giant type, a marquee of services and a project link.",
+add(C, "agency", "Creative Agency", "Studio Kiln", "A bold page for a design agency, with giant type and a moving list of services.",
 HD + """body{background:#f2f0e9;color:#111;font-family:"Syne",system-ui,sans-serif;overflow-x:hidden}
 main{padding:clamp(2rem,6vw,4rem) clamp(1.2rem,5vw,4rem)}
 h1{font-size:clamp(3.5rem,13vw,10rem);line-height:.9;margin:0;font-weight:800;letter-spacing:-.04em}

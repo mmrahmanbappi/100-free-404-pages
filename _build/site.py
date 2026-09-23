@@ -92,11 +92,13 @@ def shell(title, desc, path, og, schema, body, script=""):
 <meta property="og:image" content="{SITE}/_site/og-{og}.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(title)}">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{SITE}/_site/og-{og}.jpg">
+<meta name="twitter:image:alt" content="{esc(title)}">
 <link rel="icon" href="{SITE}/_site/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{SITE}/_site/site.css">
 <script type="application/ld+json">
@@ -168,8 +170,8 @@ def build():
     # ---------- home ----------
     og_image("home", "100 free 404 page templates", "HTML and CSS, one file each, free under the MIT license",
              [shots[s] for s in ["astronaut", "glitch", "eight-bit", "terminal", "beach", "agency"]])
-    title = "100 Free 404 Page Templates (HTML and CSS)"
-    desc = "Download 100 free 404 error page templates in HTML and CSS. Minimal, animated, interactive, retro and business designs. One file each, MIT license."
+    title = "100 Free 404 Page Templates: HTML and CSS, Free Download"
+    desc = "Free 404 error page templates with a live demo for each. Pick one, change the text, upload. Works on phones, no sign-up, free for business use."
     schema = {"@context": "https://schema.org", "@graph": [WEBSITE, AUTHOR,
         {"@type": "CollectionPage", "@id": SITE + "/#webpage", "url": SITE + "/", "name": title, "description": desc,
          "isPartOf": {"@id": SITE + "/#website"}, "mainEntity": {"@id": SITE + "/#categories"}, "inLanguage": "en",
@@ -183,9 +185,9 @@ def build():
         f'<button type="button" aria-pressed="false" data-f="{c[0]}">{esc(c[1])}</button>' for c in CATEGORIES)
     body = f"""<section class="hero"><div class="wrap">
 <h1>100 free 404 page templates</h1>
-<p class="lead">A broken link does not have to lose you a visitor. Pick a 404 page that fits your site, change the name and links, and upload it. Every template is a single HTML file that works on phones, with no libraries to install.</p>
+<p class="lead">A broken link should not cost you a visitor. Pick a 404 page you like, change the name and links, and upload it. Each one is a single HTML file. It works on phones, and there is nothing to install.</p>
 <div class="actions"><a class="btn main" href="#templates">Browse the templates</a><a class="btn alt" href="{SITE}/guide/">How to set up a 404 page</a></div>
-<p class="small">Free for personal and commercial use under the MIT license.</p>
+<p class="small">Free for personal and business use. No sign-up. Download one template at a time.</p>
 </div></section>
 <section class="band alt" id="templates"><div class="wrap">
 <h2>All templates</h2>
@@ -221,15 +223,18 @@ b.forEach(x=>x.addEventListener('click',()=>{b.forEach(y=>y.setAttribute('aria-p
     for cid, cname, cdesc in CATEGORIES:
         items = [p for p in PAGES if p["category"] == cid]
         og_image(cid, f"{cname} 404 pages", f"{len(items)} free templates in HTML and CSS", [shots[p["slug"]] for p in items])
-        t = f"{cname} 404 Page Templates, Free HTML and CSS"
+        t = f"{len(items)} Free {cname} 404 Page Templates (HTML and CSS)"
         if len(t) > 60:
-            t = f"{cname} 404 Page Templates (Free)"
-        d = f"{len(items)} free {cname.lower()} 404 error page templates. {cdesc} One HTML file each, MIT license."
+            t = f"{len(items)} Free {cname} 404 Pages (HTML and CSS)"
+        d = f"{len(items)} free {cname.lower()} 404 page designs. {cdesc} See a live demo, then download in one click."
+        if len(d) > 158:
+            d = f"{len(items)} free {cname.lower()} 404 page designs with a live demo for each. Download in one click, no sign-up."
         url = f"{SITE}/{cid}/"
         schema = {"@context": "https://schema.org", "@graph": [WEBSITE, AUTHOR,
             {"@type": "CollectionPage", "@id": url + "#webpage", "url": url, "name": t, "description": d,
              "isPartOf": {"@id": SITE + "/#website"}, "breadcrumb": {"@id": url + "#breadcrumb"},
-             "mainEntity": {"@id": url + "#list"}, "inLanguage": "en", "dateModified": TODAY},
+             "mainEntity": {"@id": url + "#list"}, "inLanguage": "en", "dateModified": TODAY,
+             "primaryImageOfPage": f"{SITE}/_site/og-{cid}.jpg", "author": {"@id": SITE + "/#author"}},
             {"@type": "ItemList", "@id": url + "#list", "numberOfItems": len(items), "itemListElement": [
                 {"@type": "ListItem", "position": i + 1, "item": {
                     "@type": "CreativeWork", "name": f"{p['name']} 404 page template", "description": p["blurb"],
@@ -257,9 +262,16 @@ b.forEach(x=>x.addEventListener('click',()=>{b.forEach(y=>y.setAttribute('aria-p
     open(os.path.join(ROOT, "404.html"), "w").write(nf)
 
     urls = [SITE + "/"] + [f"{SITE}/{c[0]}/" for c in CATEGORIES] + [SITE + "/guide/"]
+    def imgs(u):
+        cid = u[len(SITE) + 1:].strip("/")
+        items = [p for p in PAGES if p["category"] == cid] if cid and cid != "guide" else []
+        if u == SITE + "/":
+            return f"    <image:image><image:loc>{SITE}/_site/og-home.jpg</image:loc></image:image>\n"
+        return "".join(f"    <image:image><image:loc>{SITE}/{cid}/{p['slug']}/screenshot.png</image:loc></image:image>\n" for p in items)
     open(os.path.join(ROOT, "sitemap.xml"), "w").write(
-        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        + "".join(f"  <url>\n    <loc>{u}</loc>\n    <lastmod>{TODAY}</lastmod>\n  </url>\n" for u in urls) + "</urlset>\n")
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'
+        + "".join(f"  <url>\n    <loc>{u}</loc>\n    <lastmod>{TODAY}</lastmod>\n{imgs(u)}  </url>\n" for u in urls) + "</urlset>\n")
     open(os.path.join(ROOT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
     open(os.path.join(ROOT, ".nojekyll"), "w").write("")
     readme()
@@ -275,8 +287,8 @@ GUIDE_FAQ = [
 
 def guide():
     url = SITE + "/guide/"
-    title = "How to Set Up a Custom 404 Page on Any Website"
-    desc = "Step by step: add a custom 404 error page on Apache, Nginx, WordPress, cPanel, Netlify, Vercel, Cloudflare Pages and GitHub Pages, and keep your SEO safe."
+    title = "How to Set Up a Custom 404 Page: Step-by-Step Guide"
+    desc = "Add a custom 404 page in minutes on Apache, cPanel, Nginx, WordPress, Netlify, Vercel or GitHub Pages. Copy-paste steps, plus tips to keep your SEO safe."
     og_image("guide", "How to set up a 404 page", "Apache, Nginx, WordPress, Netlify, Vercel and more",
              [os.path.join(ROOT, p["category"], p["slug"], "screenshot.png") for p in PAGES[::17]])
     schema = {"@context": "https://schema.org", "@graph": [WEBSITE, AUTHOR,
@@ -341,43 +353,52 @@ location = /404.html {{
 def readme():
     rows = []
     for cid, cname, cdesc in CATEGORIES:
-        rows.append(f"\n### {cname}\n\n{cdesc}\n\n| Preview | Template |\n|---|---|")
-        for p in [x for x in PAGES if x["category"] == cid]:
+        items = [x for x in PAGES if x["category"] == cid]
+        rows.append(f"\n### {cname} ({len(items)})\n\n{cdesc} [See all {cname.lower()} templates]({SITE}/{cid}/)\n\n| Preview | Template |\n|---|---|")
+        for p in items:
             path = f"{cid}/{p['slug']}"
-            rows.append(f"| [![{p['name']}]({path}/thumb.webp)]({SITE}/{path}/) | **[{p['name']}]({path}/)**<br>{p['blurb']}<br><br>"
-                        f"[Live demo]({SITE}/{path}/) / [Download]({path}/index.html) |")
+            rows.append(f"| [![{p['name']} 404 page]({path}/thumb.webp)]({SITE}/{path}/) | **{p['name']}**<br>{p['blurb']}<br><br>"
+                        f"[Live demo]({SITE}/{path}/) / [Download from the website]({SITE}/{cid}/) |")
     text = f"""# 100 Free 404 Page Templates
 
-![100 free 404 page templates](_site/og-home.jpg)
+![Preview of free 404 page templates](_site/og-home.jpg)
 
-100 free 404 error page templates, each in a single HTML file. Pick one that fits your site, change the name and links, and upload it. No libraries, no build step.
+Free 404 error pages in HTML and CSS. Pick one you like, change the name and the links, and upload it to your website. Each template is one file, so there is nothing to install.
 
-**[See every template with a live demo](https://mmrahmanbappi.github.io/100-free-404-pages/)** / **[How to set up a 404 page]({SITE}/guide/)**
+**[See all 100 templates with a live demo]({SITE}/)**
 
 ## Why use these templates
 
 - **One file each.** The CSS and JavaScript are inside the HTML file.
-- **Works on phones.** Every template adjusts to phones, tablets and desktops.
-- **Keeps visitors.** Many include a search box, popular links or a small game.
-- **Safe for SEO.** Each page has a noindex tag, and the guide shows how to keep the correct 404 status.
-- **Free for business use.** MIT license. Use them for your own site or for clients.
+- **Works on phones.** Every page fits phones, tablets and big screens.
+- **Keeps visitors on your site.** Many have a search box, popular links or a small game.
+- **Safe for SEO.** Each page has a noindex tag, and the guide shows how to keep the right 404 status.
+- **Free for business use.** MIT license. Use them on your own site or for clients.
 
-## How to use a template
+## How to download a template
 
-1. Open the template folder and download `index.html`.
-2. Rename it to `404.html`, then change the brand name, colors and links.
-3. Upload it to your site and tell your server to use it. The [setup guide]({SITE}/guide/) covers Apache, Nginx, cPanel, WordPress, Netlify, Vercel, Cloudflare Pages and GitHub Pages.
+1. Open the [website]({SITE}/) and find a template you like.
+2. Click **Live demo** to see it full size.
+3. Click **Download** to save that one template as `404.html`.
+
+Templates are downloaded one at a time, so you only get the page you need.
+
+## How to use it
+
+1. Open `404.html` in any text editor.
+2. Change the brand name, the colors and the links.
+3. Upload it to your website and tell your server to use it. The [setup guide]({SITE}/guide/) has copy-paste steps for Apache, cPanel, Nginx, WordPress, Netlify, Vercel, Cloudflare Pages and GitHub Pages.
 
 ## Templates
 {chr(10).join(rows)}
 
-## Contributing
+## Questions or ideas
 
-New templates are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first.
+[Open an issue](https://github.com/mmrahmanbappi/100-free-404-pages/issues) if something does not work, or if you have an idea for a new template. See [CONTRIBUTING.md](CONTRIBUTING.md) to add one yourself.
 
 ## License
 
-[MIT](LICENSE). Free for personal and commercial use.
+[MIT](LICENSE). Free for personal and business use.
 
 Made by [MM Rahman Bappi](https://mmseo.app/).
 """

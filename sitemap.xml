@@ -1,48 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mmrahmanbappi.github.io/100-free-404-pages/</loc>
     <lastmod>2026-09-23</lastmod>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/_site/og-home.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://mmrahmanbappi.github.io/100-free-404-pages/minimal/</loc>
     <lastmod>2026-09-23</lastmod>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/minimal/big-number/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/minimal/split-screen/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/minimal/outline/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/minimal/left-aligned/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/minimal/circle/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/minimal/serif-editorial/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/minimal/stacked-lines/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/minimal/card-center/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/minimal/half-cut/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/minimal/grid-lines/screenshot.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://mmrahmanbappi.github.io/100-free-404-pages/illustrated/</loc>
     <lastmod>2026-09-23</lastmod>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/illustrated/astronaut/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/illustrated/lost-sock/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/illustrated/unplugged/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/illustrated/treasure-map/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/illustrated/ufo/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/illustrated/fishing/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/illustrated/balloon/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/illustrated/empty-box/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/illustrated/telescope/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/illustrated/hiding-cat/screenshot.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://mmrahmanbappi.github.io/100-free-404-pages/animated/</loc>
     <lastmod>2026-09-23</lastmod>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/animated/glitch/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/animated/floating-numbers/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/animated/typewriter/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/animated/pulse-radar/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/animated/bouncing-ball/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/animated/waves/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/animated/flicker-sign/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/animated/rotating-planet/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/animated/loading-bar/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/animated/falling-letters/screenshot.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://mmrahmanbappi.github.io/100-free-404-pages/interactive/</loc>
     <lastmod>2026-09-23</lastmod>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/interactive/flashlight/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/interactive/catch-the-page/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/interactive/memory-cards/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/interactive/parallax-mouse/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/interactive/search-helper/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/interactive/whack-a-bug/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/interactive/drag-the-zero/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/interactive/click-counter/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/interactive/choose-path/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/interactive/tiny-snake/screenshot.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://mmrahmanbappi.github.io/100-free-404-pages/dark/</loc>
     <lastmod>2026-09-23</lastmod>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/dark/neon-outline/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/dark/midnight-gradient/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/dark/starfield/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/dark/cyber-grid/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/dark/spotlight-dark/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/dark/aurora/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/dark/dark-minimal-mono/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/dark/lava-lamp/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/dark/matrix-rain/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/dark/eclipse/screenshot.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://mmrahmanbappi.github.io/100-free-404-pages/retro/</loc>
     <lastmod>2026-09-23</lastmod>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/retro/eight-bit/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/retro/windows-dialog/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/retro/vhs-tape/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/retro/newspaper/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/retro/typewriter-paper/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/retro/arcade-cabinet/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/retro/blueprint/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/retro/cassette/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/retro/dot-matrix/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/retro/vinyl-record/screenshot.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://mmrahmanbappi.github.io/100-free-404-pages/developer/</loc>
     <lastmod>2026-09-23</lastmod>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/developer/terminal/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/developer/code-editor/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/developer/http-response/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/developer/json-viewer/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/developer/stack-trace/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/developer/git-log/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/developer/browser-console/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/developer/man-page/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/developer/compiler-error/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/developer/regex-test/screenshot.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://mmrahmanbappi.github.io/100-free-404-pages/business/</loc>
     <lastmod>2026-09-23</lastmod>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/business/corporate/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/business/saas/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/business/law-firm/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/business/clinic/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/business/school/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/business/restaurant/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/business/hotel/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/business/real-estate/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/business/nonprofit/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/business/agency/screenshot.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://mmrahmanbappi.github.io/100-free-404-pages/ecommerce/</loc>
     <lastmod>2026-09-23</lastmod>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/ecommerce/out-of-stock/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/ecommerce/empty-cart/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/ecommerce/fashion/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/ecommerce/grocery/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/ecommerce/electronics/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/ecommerce/bookstore/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/ecommerce/furniture/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/ecommerce/coupon/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/ecommerce/marketplace/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/ecommerce/gift-box/screenshot.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://mmrahmanbappi.github.io/100-free-404-pages/seasonal/</loc>
     <lastmod>2026-09-23</lastmod>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/seasonal/rainy-city/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/seasonal/snowy-mountains/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/seasonal/beach/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/seasonal/under-the-sea/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/seasonal/forest-trail/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/seasonal/desert/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/seasonal/halloween/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/seasonal/autumn-leaves/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/seasonal/kite-meadow/screenshot.png</image:loc></image:image>
+    <image:image><image:loc>https://mmrahmanbappi.github.io/100-free-404-pages/seasonal/city-night/screenshot.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://mmrahmanbappi.github.io/100-free-404-pages/guide/</loc>
